@@ -1,0 +1,11 @@
+# Ignore env stuff
+.conda
+.venv
+
+# Ignore large files and keep raw-data directory empty any file under raw-data should be ignored
+data/raw-data/*
+data/clean-data/*
+# keep a .gitkeep file so the folder remains in repo
+!data/raw-data/.gitkeep
+!data/clean-data/.gitkeep
+
