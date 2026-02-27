@@ -85,7 +85,7 @@ print(f"Dataset now spans years: {sorted(df_final['Year'].unique())}")
 print("\n--- Exporting Data ---")
 
 # Define the output path
-output_path = 'data/clean-data/cleaned_sf_crime.csv'
+output_path = 'data/clean-data/sf_clean_data.csv'
 
 # Save to CSV, ignoring the dataframe's index
 df_final.to_csv(output_path, index=False)
