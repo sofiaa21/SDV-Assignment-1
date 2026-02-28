@@ -23,7 +23,8 @@ pre_rename_map = {
     'Descript': 'Incident Description',
     'PdDistrict': 'Police District',
     'X': 'Longitude',
-    'Y': 'Latitude'
+    'Y': 'Latitude',
+    'DayOfWeek' : 'Incident Day of Week'
 }
 pre2018_data = pre2018_data.rename(columns=pre_rename_map)
 
@@ -31,7 +32,7 @@ pre2018_data = pre2018_data.rename(columns=pre_rename_map)
 shared_cols = [
     'Incident Number', 'Incident Datetime', 'Incident Category', 
     'Incident Description', 'Police District', 'Resolution', 
-    'Latitude', 'Longitude'
+    'Latitude', 'Longitude', 'Incident Day of Week'
 ]
 
 pre_clean = pre2018_data[shared_cols].copy()
