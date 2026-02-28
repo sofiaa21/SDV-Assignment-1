@@ -38,6 +38,11 @@ shared_cols = [
 pre_clean = pre2018_data[shared_cols].copy()
 print(f"Pre-2018 columns aligned. Sample coordinates: Lat {pre_clean['Latitude'].iloc[0]}, Long {pre_clean['Longitude'].iloc[0]}")
 
+# --- FILTER OUT 2018 FROM HISTORICAL DATA ---
+print("\n--- Filtering out 2018 from Historical Data ---")
+pre_clean = pre_clean[pd.to_datetime(pre_clean['Incident Datetime']).dt.year < 2018]
+print(f"Pre-2018 data after removing 2018: {len(pre_clean)} rows")
+
 # --- STEP 3: CLEAN POST-2018 DATA ---
 print("\n--- Processing Post-2018 Data ---")
 
