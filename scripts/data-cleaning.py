@@ -2,8 +2,8 @@ import pandas as pd
 
 # --- STEP 1: LOAD DATA ---
 print("--- Loading Datasets ---")
-pre2018_data = pd.read_csv('data/raw-data/Police_Department_Incident_Reports__Historical_2003_to_May_2018_20260227.csv')
-post2018_data = pd.read_csv('data/raw-data/Police_Department_Incident_Reports__2018_to_Present_20260227.csv')
+pre2018_data = pd.read_csv('data/raw-data/pre2018_data.csv')
+post2018_data = pd.read_csv('data/raw-data/post2018_data.csv')
 
 print(f"Pre-2018 Data loaded: {pre2018_data.shape[0]} rows")
 print(f"Post-2018 Data loaded: {post2018_data.shape[0]} rows")
